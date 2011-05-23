@@ -1,0 +1,10 @@
+This is a C# library for accessing the REST APIs exposed by Redmine.
+Please see http://www.redmine.org/projects/redmine/wiki/Rest_api for the
+list of REST APIs exposed by Redmine.
+
+
+Redmine is a flexible project management web application. Written using 
+Ruby on Rails framework, it is cross-platform and cross-database.
+Please see http://www.redmine.org/ for more details on Redmine.
+
+
