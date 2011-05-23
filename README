@@ -8,3 +8,11 @@ Ruby on Rails framework, it is cross-platform and cross-database.
 Please see http://www.redmine.org/ for more details on Redmine.
 
 
+Here is some sample code to dump the first 100 issues of a project using this library.
+
+RedmineClient rc = new RedmineClient("127.0.0.1", 80, "redmine", false, "api_key");
+Projects projects = rc.getProjects(true);
+
+// get all issues for project "test"
+Issues issues = rc.getIssues(rc.projects.getProjectByIdentifier("test"), 0);
+issues.dump(project.name);
