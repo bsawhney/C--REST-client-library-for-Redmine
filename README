@@ -14,5 +14,5 @@ RedmineClient rc = new RedmineClient("127.0.0.1", 80, "redmine", false, "api_key
 Projects projects = rc.getProjects(true);
 
 // get all issues for project "test"
-Issues issues = rc.getIssues(rc.projects.getProjectByIdentifier("test"), 0);
+Issues issues = rc.getIssues(projects.getProjectByIdentifier("test"), 0);
 issues.dump(project.name);
