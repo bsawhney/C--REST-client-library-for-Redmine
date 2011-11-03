@@ -93,12 +93,16 @@ namespace Redmine {
         /// Gets the issues.
         /// </summary>
         /// <param name="project">The project.</param>
-        /// <param name="priorityID">The priority ID.</param>
+        /// <param name="trackerID">The tracker to get the issues for, leave as 0 for all trackers</param>
+        /// <param name="priorityID">The priority ID to get the issues for, leave as 0 for all issues</param>
         /// <returns></returns>
-        public Issues getIssues(Project project, int priorityID) {
+        public Issues getIssues(Project project, int trackerID, int priorityID) {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("project_id", project.Id.ToString());
             parameters.Add("limit", "100");
+            if (trackerID > 0) {
+                parameters.Add("tracker_id", trackerID.ToString());
+            }
             if (priorityID > 0) {
                 parameters.Add("priority_id", priorityID.ToString());
             }

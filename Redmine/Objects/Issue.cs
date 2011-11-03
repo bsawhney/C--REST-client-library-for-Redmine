@@ -17,7 +17,7 @@ namespace Redmine {
         public NameId priority = new NameId();
         public NameId author = new NameId();
         public NameId assigned_to = new NameId();
-        public NameId cateogry = new NameId();
+        public NameId category = new NameId();
         public NameId fixed_version = new NameId();
         public string subject;
         public string description;
@@ -46,7 +46,7 @@ namespace Redmine {
             Console.WriteLine(szFormat, "priority", priority);
             Console.WriteLine(szFormat, "author", author);
             Console.WriteLine(szFormat, "assigned_to", assigned_to);
-            Console.WriteLine(szFormat, "category", cateogry);
+            Console.WriteLine(szFormat, "category", category);
             Console.WriteLine(szFormat, "version", fixed_version);
             Console.WriteLine(szFormat, "subject", subject);
             Console.WriteLine(szFormat, "description", description);
